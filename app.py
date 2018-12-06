@@ -3,7 +3,29 @@ import math
 print("Hello world!")
 2 + 2
 x = 1
-unit_price = 3
+y = 2
+print(id(x))
+x, y = 1, 2
+print(id(x))
+x = y = 1
+# ID x mutable address
+print(id(x))
+x = x + 1
+# ID x new immutable (cant change) address
+print(id(x))
+# Dynamic Variable
+# mypy linter will check type annotations
+xx: int = 1
+xx = 10  # "String"
+
+# binary
+binary = 0b10
+print("Binary:", binary)
+print("Binary: ", bin(binary))
+
+# hexadecimal
+hexa = 0x12c
+print("Hex: ", hex(x))
 
 student_count = 1000
 rating = 4.99
@@ -13,13 +35,12 @@ is_published = False
 course_name = "Python\n\"Programming\""
 course_description = """
 Hello
-World
-"""
-
-print(student_count)
-print(rating)
-print(course_description)
-print(len(course_name))
+World"""
+print("x:", x)
+print("student_count: ", student_count)
+print("rating: ", rating)
+print("Course description:",  course_description)
+print("Length of a variable: ", len(course_name))
 
 print("# Substring")
 print(course_name[5])
@@ -44,29 +65,35 @@ print("Jedd" in first)
 print("Jess" not in first)
 
 print("# Complex Numbers")
-x = 1 + 2j  # a + bi
+complex_variable = 1 + 2j  # a + bi
+print("Complex", complex_variable)
 print(10 / 3)
 print(10 // 3)
 print(10 % 3)
 print(10 ** 3)
+
+print("# Built-in Functions")
 print(round(2.9))
 print(abs(-2.9))
 
 print("# Math")
 print(math.ceil(2.2))
 
+
 print("# Input / Type")
 # x = input("x: ")
 x = 1
 print(type(x))
 
-print("# Cast")
+print("# Casting")
 # int() float() bool() str()
 y = int(x) + 1
 print(y)
 print(f"x: {x}, y: {y}")
 
-print(bool("False"))
+# Falsy
+# "" 0 [] None/null
+print(bool("False"))  # is True
 
 print("# Fundamentals Programming")
 
@@ -114,15 +141,15 @@ else:
 
 
 print("# Loops")
-# Iterable
+# Iterable List
 for x in [1, 2, 3]:
     print(x)
-
-for x in "Python":
-    print(x)
-
+# Iterable Range
 for number in range(1, 10, 2):
     print("Number", number, number * ".")
+# Iterable String
+for python in "Python":
+    print(python)
 
 successful = False
 for number in range(1, 4):
@@ -207,7 +234,7 @@ save_user(id=1, name="Jess", age=35)
 
 # Scope
 # Avoid modify Global variable
-greet = "Hello"
+greeting = "Hello"
 
 
 def hello(name):
