@@ -63,7 +63,9 @@ print(type(x))
 print("# Cast")
 # int() float() bool() str()
 y = int(x) + 1
+z = float("1.5")
 print(y)
+print(z)
 print(f"x: {x}, y: {y}")
 
 print(bool("False"))
