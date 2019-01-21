@@ -11,3 +11,5 @@ https://docs.python.org/3/library/functions.html
 >>> dir("") - print available methods in strings
 
 >>> help("".replace) - description
+
+>>> _ = last printed expression
