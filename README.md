@@ -1,3 +1,16 @@
+# Python Environment
+
+Python3 Path
+`which python3`
+Create Virtual Environment
+`virtualenv -p /usr/bin/python3 my_project`
+Activate Environment
+`source my_project/bin/activate`
+Deactivate
+`deactivate`
+Delete
+`rm -rf my_project`
+
 # python
 Python > CPython > Python Bytecode > Python Virtual Machine > Machine Code
 
