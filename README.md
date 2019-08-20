@@ -11,6 +11,35 @@ Deactivate
 Delete
 `rm -rf my_project`
 
+PIPENV - install
+```
+pip3 install pipenv
+```
+Activate - pipfile packages file
+```
+pipenv shell
+```
+Freeze - list installed packages
+```
+pipenv freeze
+```
+Install from requirements.txt
+```
+pipenv install -r ./requirements.txt
+```
+Exit
+```
+exit
+```
+# Django
+Create Django Project
+```
+django-admin startproject testproject
+```
+
+
+https://gist.github.com/jmvsevilleja/d81b456f99e03fb07fb7d9efcb9df441
+
 # python
 Python > CPython > Python Bytecode > Python Virtual Machine > Machine Code
 
