@@ -23,9 +23,17 @@ Freeze - list installed packages
 ```
 pipenv freeze
 ```
+Install
+```
+pipenv install
+```
 Install from requirements.txt
 ```
 pipenv install -r ./requirements.txt
+```
+Check Security Vulnerability
+```
+pipenv check
 ```
 Exit
 ```
