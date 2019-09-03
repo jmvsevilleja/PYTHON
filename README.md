@@ -1,15 +1,15 @@
 # Python Environment
 
 Python3 Path
-`which python3`
+```which python3```
 Create Virtual Environment
-`virtualenv -p /usr/bin/python3 my_project`
+```virtualenv -p /usr/bin/python3 my_project```
 Activate Environment
-`source my_project/bin/activate`
+```source my_project/bin/activate```
 Deactivate
-`deactivate`
+```deactivate```
 Delete
-`rm -rf my_project`
+```rm -rf my_project```
 
 PIPENV - install
 ```
