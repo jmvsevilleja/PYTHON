@@ -1,3 +1,5 @@
+# Programming with Mosh
+# https://www.youtube.com/watch?v=f79MRyMsjrQ
 import math
 
 print("Hello world!")
@@ -16,7 +18,7 @@ print(id(x))
 # Dynamic Variable
 # mypy linter will check type annotations
 xx: int = 1
-xx = 10  # "String"
+xx = 10  # "Str`ing"
 
 # binary
 binary = 0b10
@@ -50,7 +52,7 @@ print(course_name[:3])
 print(course_name[:])
 
 print("# Formatted Strings")
-first = " jedd"
+first = " jess"
 last = "Mark"
 full = f"{first} {last} {len(first)}"
 print(full)
