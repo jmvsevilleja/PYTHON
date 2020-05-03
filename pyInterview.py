@@ -14,25 +14,26 @@ for x in range(3):
 
 # Data Types
 print('Data Types')
-variable = [1, 2, 3, 4, 5]  # List
+variable = [1, 2, 3, 4, 5]  # List - duplicate values
 print(variable, ' - List')
 generator = (num for num in variable)
 print(generator, ' - Generator (yeald) - Not in memory')
 print([num for num in variable], ' - list() - converted to list - In Memory')
 
-variable = (1, 2, 3, 4, 5)  # Tuple
+variable = (1, 2, 3, 4, 5)  # Tuple - fixed
 print(variable, ' - Tuple')
 print(type(variable))
-variable = {'id': 1, 'name': 'Jess'}  # Dict
+variable = {'id': 1, 'name': 'Jess', 'list': [
+    1, 2, 3], 'dict': {1, 2, 3}}  # Dict - any values
 for key in variable:
     print(key, ' - Key')
     print(variable[key], ' - Value')
 print(type(variable), ' - Dictionary')
-variable = {1, '2', (3), 4.5}  # Set
+variable = {1, 1, '2', (3), 4.5, (1, 2, 3)}  # Set - unique, unordered values
 for value in variable:
     print(type(value), ' - Set Variable Type')
     print(value, ' - Value')
-print(type(variable), ' - Set - NO list and dictionary')
+print(type(variable), ' - Set - NO mutable items')
 
 # List Comprehension
 
