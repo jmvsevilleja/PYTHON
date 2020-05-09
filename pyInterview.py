@@ -14,7 +14,7 @@ for x in range(3):
 
 # Data Types
 print('Data Types')
-variable = [1, 2, 3, 4, 5]  # List - duplicate values
+variable = [1, 2, 3, 4, 5]  # List - duplicate values -
 print(variable, ' - List')
 generator = (num for num in variable)
 print(generator, ' - Generator (yeald) - Not in memory')
@@ -29,7 +29,8 @@ for key in variable:
     print(key, ' - Key')
     print(variable[key], ' - Value')
 print(type(variable), ' - Dictionary')
-variable = {1, 1, '2', (3), 4.5, (1, 2, 3)}  # Set - unique, unordered values
+# Set - unique, unordered values - searching
+variable = {1, 1, '2', (3), 4.5, (1, 2, 3)}
 for value in variable:
     print(type(value), ' - Set Variable Type')
     print(value, ' - Value')
@@ -39,4 +40,4 @@ print(type(variable), ' - Set - NO mutable items')
 
 variable = [1, 2, 3, 4, 5]
 squares = [num*num for num in variable]
-print(squares)
+print("List comprehension: squares: ", squares)

@@ -2,6 +2,19 @@
 # https://www.youtube.com/watch?v=f79MRyMsjrQ
 import math
 
+mylist = [1, 2, 3]
+print("A list: %s" % mylist)
+
+mylist = (1, 2, 3, "test")
+print("A list: %d %d %s %s" % mylist)
+
+# %s - String(or any object with a string representation, like numbers)
+# %d - Integers
+# %f - Floating point numbers
+# %. < number of digits > f - Floating point numbers with a fixed amount of digits to the right of the dot.
+# %x/%X - Integers in hex representation(lowercase/uppercase)
+
+
 print("Hello world!")
 2 + 2
 x = 1
@@ -119,6 +132,26 @@ elif age < 18:
 else:
     massage = f"{age} is equals 18"
 print(massage)
+
+print("# Switch")
+
+
+def one():
+    return 'one'
+
+
+def two():
+    return 'two'
+
+
+def num_to_word(arg):
+    switcher = {1: one, 2: two}
+    func = switcher.get(arg, lambda: "invalid")
+    print(func())
+
+
+num_to_word(3)
+
 
 print("# Ternary Operator")
 message = f"{age} is eligible" if age >= 18 else f"{age} is not Eligible"

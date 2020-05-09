@@ -21,6 +21,25 @@ else:
     massage = f"{age} is equals 18"
 print(massage)
 
+print("# Switch")
+
+
+def one():
+    return 'one'
+
+
+def two():
+    return 'two'
+
+
+def num_to_word(arg):
+    switcher = {1: one, 2: two}
+    func = switcher.get(arg, lambda: "invalid")
+    print(func())
+
+
+num_to_word(3)
+
 print("# Ternary Operator")
 message = f"{age} is eligible" if age >= 18 else f"{age} is not Eligible"
 print(message)
@@ -40,7 +59,7 @@ else:
 # Chain comparison
 # age should between 18 and 65
 age = 22
-if 18 <= age < 65:
+if 18 <= age < 65:  # if age >= 18 and age < 65
     print("Eligible")
 else:
     print("Not Eligible")
@@ -50,7 +69,11 @@ print("# Loops")
 # Iterable List
 for x in [1, 2, 3]:
     print(x)
+print("enumarate")
+for i, x in enumerate([3, 2, 1], start=1):
+    print(f"{i}:{x}")
 # Iterable Range
+print("range")
 for number in range(1, 10, 2):
     print("Number", number, number * ".")
 # Iterable String
@@ -91,3 +114,13 @@ while True:
     print("ECHO", command)
     if command.lower() == "quit":
         break
+
+print("# Exercise")
+
+total = 0
+for num in range(1, 10):
+    if(num % 2 == 0):
+        print(num)
+        total += 1
+
+print(f"We have {total} even numbers")

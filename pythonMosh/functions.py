@@ -28,23 +28,23 @@ def increment(number, by=1):
 print("Increment: ", increment(2, by=1))
 
 
-def multiply(*numbers):
+def multiply(*numbers):  # arguments - tuples
     product = 1
     for number in numbers:
         print(number)
         # assignment operator
         product *= number
-        return product
+    return product
 
 
 # Collections of arguments
 # list notation [1,2,3,4]
 # tuples (1,2,3,4)
-print("Multiply: ", multiply(1, 2, 3))
+print("Multiply: Args: ", multiply(1, 2, 3))
 
 
-def save_user(**user):
-    print("Name: ", user["name"])
+def save_user(**user):  # keyword arguments - dictionary
+    print("Dictionary Name: ", user["name"])
 
 
 # Dictionary Object
@@ -74,10 +74,25 @@ print(greet)
 # F9 Set Breakpoin
 
 print("Start")
-print("Start")
-print("Multiply: ", multiply(1, 2, 3))
 print("Multiply: ", multiply(1, 2, 3))
 
 # VSCode Tricks
 # Alt Arrow to move code up and down
 # Shift Alt Arrow to duplicate
+# Comment Ctrl + /
+
+
+print("Exercise")
+
+
+def fizz_buzz(input):
+    if(input % 3 == 0 and input % 5 == 0):
+        return "FizzBuzz"
+    if(input % 3 == 0):
+        return "Fizz"
+    if(input % 5 == 0):
+        return "Buzz"
+    return input
+
+
+print(fizz_buzz(15))
