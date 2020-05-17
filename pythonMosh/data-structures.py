@@ -26,7 +26,11 @@ numbers = [1, 2, 3, 4, 5, 6]
 one, two, three, *other, last = numbers
 print("Unpacking List: ", one, two, three, other, last)
 
-print("looping over list")
+print("looping over List")
+for value in letters:
+    print(f"Value: {value}")
+
+print("looping over List via enumerate")
 for key, value in enumerate(letters):
     print(f"Key: {key} Value: {value}")
 
@@ -109,6 +113,23 @@ print(point)
 string = tuple("Hello World")
 print(string)
 
+print("looping over Tuple")
+for value in point:
+    print(f"Value: {value}")
+
+print("looping over Tuple via enumerate")
+for key, value in enumerate(point):
+    print(f"Key: {key} Value: {value}")
+
+print("# Tuple Comprehension")  # Gernerate values
+tuples = (x*2 for x in range(1000))  # in each iteration
+lists = [x*2 for x in range(1000)]
+print("Tuples: ", tuples)
+# Tuples:  <generator object <genexpr> at 0x0000017A28B5E900>
+print("Generator: ", getsizeof(tuples))  # no Len - disadv
+print("List: ", getsizeof(lists))  # high memory - disadv
+print("List Len: ", len(lists))  # adv
+
 
 print("# SWAP Variables")
 x = 10
@@ -124,7 +145,7 @@ print("# Sets")  # collection without duplicates
 first = [1, 1, 2, 3, 4]
 first = set(first)  # cast - iterable - set declaration
 print("Uniques: ", first)
-second = {1, 5}  # Set declaration without key
+second = {1, 5}  # Set declaration - without key
 second.add(5)
 print(second)
 second.remove(5)
@@ -141,6 +162,13 @@ print("# Sets Comprehension")
 sets = {x*2 for x in range(5)}
 print("Sets: ", sets)
 
+print("looping over Sets")
+for value in first | second:
+    print(f"Value: {value}")
+
+print("looping over Sets via enumerate")
+for key, value in enumerate(first | second):
+    print(f"Key: {key} Value: {value}")
 
 print("# Dictionaries")  # Collection of key value pairs
 
@@ -179,16 +207,6 @@ dics = {x: x*2 for x in range(5)}
 print("Dictionary: ", dics)
 
 
-print("# Tuple Comprehension")  # Gernerate values
-tuples = (x*2 for x in range(1000))  # in each iteration
-lists = [x*2 for x in range(1000)]
-print("Tuples: ", tuples)
-# Tuples:  <generator object <genexpr> at 0x0000017A28B5E900>
-print("Generator: ", getsizeof(tuples))  # no Len
-print("List: ", getsizeof(lists))
-print("List Len: ", len(lists))  # adv
-
-
 print("# Unpacking")  # return iterables
 numbers = [*numbers, 1, 2, 3]
 print("Unpacked list: ", numbers)
@@ -213,3 +231,14 @@ pprint(word_freq, width=1)  # pprint dictionary
 print(word_freq.items())
 highest = sorted(word_freq.items(), key=lambda word: word[1], reverse=True)[0]
 print("Highest word count: ", highest)
+
+char_freq = {}
+
+for char in list(sentence):
+    if char in char_freq:
+        char_freq[char] += 1
+    else:
+        char_freq[char] = 1
+
+highest = sorted(char_freq.items(), key=lambda char: char[1], reverse=True)[:5]
+print("Highest character count: ", highest)

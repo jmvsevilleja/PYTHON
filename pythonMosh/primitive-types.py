@@ -8,7 +8,7 @@ print("# Primitive Types!")
 # 	Integer - 123
 # 	Float - 3.1416
 # 	Complex Numbers - a+bi
-        
+
 # Boolean - True/False
 # String - "string"
 
