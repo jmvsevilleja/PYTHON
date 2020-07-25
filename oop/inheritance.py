@@ -1,3 +1,6 @@
+from pprint import pprint
+
+
 class Fish:
     def __init__(self, first_name, last_name="Fish",
                  skeleton="bone", eyelids=False):
@@ -51,28 +54,37 @@ class Shark(Fish):
 # terry.swim_backwards()
 
 casey = Clownfish("Casey")
-print(casey.first_name + " " + casey.last_name)
-casey.swim()
-casey.live_with_anemone()
+print(casey.first_name + " " + casey.last_name)  # Casey Fish
+casey.swim()  # The fish is swimming.
+casey.live_with_anemone()  # The clownfish is coexisting with sea anemone.
 
 sammy = Shark("Sammy")
-print(sammy.first_name + " " + sammy.last_name)
-sammy.swim()
+print(sammy.first_name + " " + sammy.last_name)  # Sammy Shark
+sammy.swim()  # The fish is swimming.
+# The shark cannot swim backwards, but can sink backwards.
 sammy.swim_backwards()
-print(sammy.eyelids)
-print(sammy.skeleton)
+print(sammy.eyelids)  # True
+print(sammy.skeleton)  # cartilage
 
 
 terry = Trout()
 # Initialize first name
 terry.first_name = "Terry"
 # Use parent __init__() through super()
-print(terry.first_name + " " + terry.last_name)
-print(terry.eyelids)
+print(terry.first_name + " " + terry.last_name)  # Terry Fish
+print(terry.eyelids)  # False
 # Use child __init__() override
-print(terry.water)
+pprint(vars(terry))
+# {'eyelids': False,
+#  'first_name': 'Terry',
+#  'last_name': 'Fish',
+#  'skeleton': 'bone',
+#  'water': 'freshwater'}
+print(terry.water)  # freshwater
 # Use parent swim() method
-terry.swim()
+terry.swim()  # The fish is swimming.
+
+# Multiple Inheritance
 
 
 class Coral:
@@ -88,7 +100,7 @@ class Anemone:
 
 
 class CoralReef(Coral, Anemone):
-    # Multiple Inheritance
+
     pass
 
 
