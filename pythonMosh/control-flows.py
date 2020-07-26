@@ -71,9 +71,9 @@ for x in [1, 2, 3]:
     print(x)
 print("enumarate")
 for i, x in enumerate([3, 2, 1], start=1):
-    print(f"{i}:{x}")
+    print(f"{i}:{x}")  # 1:3
 # Iterable Range
-print("range")
+print("range: ", type(range(3)))  # range <class 'range'>
 for number in range(1, 10, 2):
     print("Number", number, number * ".")
 # Iterable String

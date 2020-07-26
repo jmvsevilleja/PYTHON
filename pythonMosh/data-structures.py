@@ -5,6 +5,7 @@ print("# List")
 name = "Jess Mark"
 print("string to list:", name.split())
 
+print('# Lists')  # list of values - w/ key
 letters = ["a", "b", "c"]
 zeros = [0] * 5
 print(letters)
@@ -48,8 +49,8 @@ print(letters)
 
 print("Finding List")  # finding in list
 letters = ["a", "b", "c", "d", "d"]
-print("Find d: ", "d" in letters)
-print("Count d: ", letters.count("d"))
+print("Find d: ", "d" in letters)  # True
+print("Count d: ", letters.count("d"))  # 2
 
 print("Sorting List")  # sorting basics
 numbers = [3, 41, 2, 9, 6]
@@ -107,10 +108,11 @@ print("# Queue")  # LIFO last in last out
 # 	queue.append()
 #   queue.popleft()
 
-print("# Tuple")  # sequence of object that is read only
+print("# Tuple")  # sequence of object that is read only - w/o key
+print(type((5,)))
 point = (1, 2) * 2
 print(point)
-string = tuple("Hello World")
+string = tuple("Hello World")  # string to tuple
 print(string)
 
 print("looping over Tuple")
@@ -120,6 +122,9 @@ for value in point:
 print("looping over Tuple via enumerate")
 for key, value in enumerate(point):
     print(f"Key: {key} Value: {value}")
+
+for key in point:
+    print(f"Key: {key} Value: {point[key]}")  # using point
 
 print("# Tuple Comprehension")  # Gernerate values
 tuples = (x*2 for x in range(1000))  # in each iteration
@@ -141,17 +146,19 @@ print("# Arrays")  # for large sequence of numbers
 numbers = [1, 2, 3]
 
 
-print("# Sets")  # collection without duplicates
+# https://realpython.com/python-sets/
+print("# Sets")  # collection without duplicates - w/o key
 first = [1, 1, 2, 3, 4]
 first = set(first)  # cast - iterable - set declaration
+# print(first[0])  sets do not support indexing, slicing, or other sequence-like behavior.
 print("Uniques: ", first)
-second = {1, 5}  # Set declaration - without key
-second.add(5)
+second = {1, 5, 6}  # Set declaration - without key
+second.add(5)  # set methods
 print(second)
 second.remove(5)
-print(second)
+print('second', second)
 print(len(second))
-print(second)
+
 
 # advantage
 print("Merge:", first | second)
@@ -170,7 +177,8 @@ print("looping over Sets via enumerate")
 for key, value in enumerate(first | second):
     print(f"Key: {key} Value: {value}")
 
-print("# Dictionaries")  # Collection of key value pairs
+
+print("# Dictionaries")  # Collection of key value pairs - w/ key
 
 point = {"x": 1, "y": 2}  # dict declaration
 print(point["x"])
@@ -178,14 +186,25 @@ print(point["x"])
 points = dict(x=11, y=12, z=13)  # dict declaration
 print(points["z"])
 
-for key, value in points.items():
-    print(key, value)
+for key in points:  # key
+    print("key: %s value: %s" % (key, points[key]))  # using points
+
+for value in points:  # value
+    print(f"value:{value} ")  # using points
+
+for key, value in points.items():  # using items
+    print('key:', key, '', 'value:', value)
 
 print(point.get("z", 0))
 del points['z']
-print("items: ", points.items())
-print("values: ", points.values())
-print("keys: ", points.keys())
+print("items: ", points.items())  # dict_items([('x', 11), ('y', 12)])
+print("values: ", points.values())  # dict_values([11, 12])
+print("keys: ", points.keys())  # dict_keys(['x', 'y'])
+
+print("# Dictionary to List")
+print(list(points.items()))  # [('Gabby', 8), ('Maelle', 5)]
+print(list(points.keys()))  # ['Gabby', 'Maelle']
+print(list(points.values()))  # [8, 5]
 
 coords = {  # dictionary of dictionaries
     1: {"x": 1, "y": 2, "z": 3},
@@ -199,7 +218,6 @@ print("Coords", coords[4]["z"])
 print("Values", coords.values())  # list of dicts
 sorts = sorted(coords.values(), key=lambda pnt: pnt["x"])
 print("Sorted Dict ", sorts)
-
 
 print("# Dictionary Comprehension")
 # [expression for item in items]

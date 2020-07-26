@@ -2,6 +2,20 @@
 # https://www.youtube.com/watch?v=f79MRyMsjrQ
 import math
 
+# Types of Data
+# Number - Integers
+print("Is number 1 an Integer?", type(1) is int)
+print("Is number 1.5 an Integer?", type(1.5) is int)
+# Number - Float/Decimal
+print("Is number 1.5 a Decimal/Float?", type(1.5) is float)
+print("Is number Maia a Decimal/Float?", type('Maia') is float)
+# String - Letter
+print("Is Maia a String/Letters?", type('Maia') is str)
+# Boolean - Truthiness
+print("Is True a Boolean?", type(True) is bool)
+print("Is False a Boolean?", type(False) is bool)
+
+
 mylist = [1, 2, 3]
 print("A list: %s" % mylist)
 
