@@ -142,7 +142,7 @@ y = 11
 x, y = y, x
 print(x, y)
 
-print("# Arrays")  # for large sequence of numbers
+print("# Arrays")  # for large sequence of numbers, can be different types
 numbers = [1, 2, 3]
 
 
@@ -177,6 +177,8 @@ print("looping over Sets via enumerate")
 for key, value in enumerate(first | second):
     print(f"Key: {key} Value: {value}")
 
+# sets_coords = {{"x": 1}}  # sets of dictionaries
+# Sets of Dictionaries is not allowed coz Dictionaries are mutable
 
 print("# Dictionaries")  # Collection of key value pairs - w/ key
 
@@ -206,6 +208,9 @@ print(list(points.items()))  # [('Gabby', 8), ('Maelle', 5)]
 print(list(points.keys()))  # ['Gabby', 'Maelle']
 print(list(points.values()))  # [8, 5]
 
+list_coords = [{"x": 1}, {"y": 1}]  # list of dictionaries
+print("List of Dictionaries: ", list_coords[0]['x'])
+
 coords = {  # dictionary of dictionaries
     1: {"x": 1, "y": 2, "z": 3},
     2: {"x": 4, "y": 5, "z": 6},
@@ -213,9 +218,9 @@ coords = {  # dictionary of dictionaries
 }
 coords[4] = {"x": 7, "y": 8, "z": 9}  # insert
 
-print("Coords", coords)
+print("Coords", coords)  # {1: {'x': 1, 'y': 2, 'z': 3}, 2: {'
 print("Coords", coords[4]["z"])
-print("Values", coords.values())  # list of dicts
+print("Values", coords.values())  # list of dicts [{'x': 1, 'y': 2, 'z': 3}, {'
 sorts = sorted(coords.values(), key=lambda pnt: pnt["x"])
 print("Sorted Dict ", sorts)
 
